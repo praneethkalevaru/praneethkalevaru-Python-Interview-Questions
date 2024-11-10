@@ -6,8 +6,6 @@ Welcome to the **Python Interview Questions** repository! This repository contai
 - [About](#about)
 - [Questions](#questions)
 - [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 This repository includes a comprehensive set of Python interview questions, categorized by topic. It's designed to help job seekers practice Python concepts and coding challenges, from basic syntax to advanced topics.
