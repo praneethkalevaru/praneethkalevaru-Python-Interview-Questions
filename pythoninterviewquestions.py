@@ -193,3 +193,75 @@ def my_decorator(func):
 def add(a,b):
     return a+b
 print(add(10,20))
+
+
+""" generator function"""
+""" At lest one yield keyword is there we consider as generator function .its use for Memory Usage,
+while time of calling generator function we use next() method.
+if we not use next()  method its print generator object."""
+def generator_fun(a, b):
+    yield a * b  # The result of a multiplied by b is yielded
+
+# Create a generator object by calling the generator function
+mult = generator_fun(10, 20)
+
+# Use next() to get the next value from the generator
+print(next(mult))  # This will print 200, as 10 * 20 is 200
+
+""" To print prime number from given range"""
+# Get the range from the user
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
+
+# Loop through each number in the range
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, num):
+            if num % i == 0:
+                # If a divisor is found, break without printing anything
+                break
+        else:
+            # If no divisors were found, print the number as it is prime
+            print("Prime number:", num)
+
+"""Reversing Words in a Sentence"""
+str="It looks like you're asking about lists in Python! A list is a built-in data structure in Python that allows you to store multiple items in a single variable. Lists are mutable, meaning their content can be changed after they are created"
+
+split_str=str.split(" ")
+l=[]
+for i in split_str:
+    l.append(i[::-1])
+res=" ".join(l)
+print(res)
+
+"""Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1] 
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1] """
+
+nums=[3,6,9,7,4,5]
+target =9
+l=[]
+for i in range(len(nums)):
+    for j in range(i+1,len(nums)):
+        if nums[i]+nums[j] ==target:
+            l.append([nums[i],nums[j]])
+for k in l:
+    print(k)
+    
+
+""" Find the second highest number from given list"""
+
+l=[333,666,222,111,555,777,999]
+for i in range(len(l)):
+    for j in range(len(l)-1):
+        if l[j]>l[j+1]:
+            l[j],l[j+1] = l[j+1],l[j]
+print(l[-2])
